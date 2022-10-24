@@ -21,10 +21,25 @@ package uk.ac.rgu.topic3;
 
 public class App {
     
+
+
     public static void main(String[] args){
 
         Cat cat = new Cat("Felix");
         Dog dog = new Dog("Fido");
+        Eagle eagle = new Eagle("Eddy");
+        Pegasus pegasus = new Pegasus("Bob");         
+        CanFly[] flyingThings = new CanFly[3];
+        flyingThings[0] = new Eagle("Eddy");
+        flyingThings[1] = new Pegasus("Bob");
+        flyingThings[2] = new Plane();
+
+        for(int i=0; i<flyingThings.length; i++){
+            System.out.println(flyingThings[i].getFlyingDistnace());
+
+        }
+
+        
 
         /**
          * Polymorphism allows us to use a sub-class in place of a super class (i.e., the class that is extended)
